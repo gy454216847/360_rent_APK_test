@@ -21,7 +21,7 @@ def appium_desired():
     desired_caps['platformName'] = data['platformName']
     desired_caps['platformVersion'] = data['platformVersion']
     desired_caps['deviceName'] = data['deviceName']
-    # desired_caps['app'] = data['app']
+    desired_caps['app'] = data['app']
     desired_caps['appPackage'] = data['appPackage']
     desired_caps['appActivity'] = data['appActivity']
     desired_caps['noReset'] = data['noReset']

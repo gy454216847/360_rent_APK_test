@@ -1,7 +1,7 @@
 platformName: Android
 #模拟器
-platformVersion: 5.1.1
-deviceName: 127.0.0.1:62001
+platformVersion: 7.1.2
+deviceName: 127.0.0.1:62025
 
 #mx4真机
 #platformVersion: 5.1
