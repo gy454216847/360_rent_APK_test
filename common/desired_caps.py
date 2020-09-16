@@ -1,5 +1,5 @@
 import logging
-
+import logging.config
 import yaml
 from appium import webdriver
 
@@ -7,7 +7,8 @@ from common.Common_fun import base_path
 
 log_config_path = base_path + '/config/log.conf'
 caps_yaml_path = base_path + '/config/360_rent_APK_caps.yaml'
-
+logging.config.fileConfig(log_config_path)
+logging = logging.getLogger()
 
 def appium_desired():
     """

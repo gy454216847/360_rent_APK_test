@@ -164,7 +164,6 @@ class Common_fun(object):
                 if index == line:
                     return row
 
-
     def latest_report(report_dir):
         lists = os.listdir(report_dir)
         print(lists)
@@ -190,7 +189,7 @@ class Common_fun(object):
         receives = data['receives']
 
         subject = data['subject']
-
+        filename = data['filename']
         msg = MIMEMultipart()
         msg['Subject'] = Header(subject, 'utf-8')
         msg['From'] = sender
@@ -199,7 +198,7 @@ class Common_fun(object):
         text_msg = MIMEText('查看自动化测试请下载附件', 'plain', 'utf-8')
         msg.attach(text_msg)
         file_msg = MIMEApplication(mail_content)
-        file_msg.add_header('content-disposition', 'attchment', filename='自动化测试报告.html')
+        file_msg.add_header('content-disposition', 'attchment', filename=filename + '.html')
 
         msg.attach(file_msg)
 
